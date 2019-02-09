@@ -1,0 +1,51 @@
+<html>
+<head>
+<link rel="stylesheet" href="https://maxcdn.bootstrapcdn.com/bootstrap/3.4.0/css/bootstrap.min.css">
+<script src="https://cdnjs.cloudflare.com/ajax/libs/jquery/2.1.3/jquery.min.js"></script>
+
+<style>
+
+.counterp{
+text-align:center;
+font-size:18px;
+font-family: Montserrat,arial;
+}
+</style>
+
+</head>
+<body>
+<div class="container">
+  <div class="row">
+    <div class="col-md-3">
+	<h2 style="font-size:54px;font-weight: bold; text-align:center"><span class="count">200</span></h2>
+      <p class="counterp">Satisfied Employees</p>
+    </div>
+    <div class="col-md-3">
+	<h2 style="font-size:54px;font-weight: bold; text-align:center"><span class="count">20</span></h2>
+      <p class="counterp">Countries</p>
+    </div>
+    <div class="col-md-3">
+	<h2 style="font-size:54px; font-weight: bold;text-align:center"><span class="count">500</span></h2>
+      <p class="counterp">Positive Company Reviews</p>
+    </div>
+	<div class="col-md-3">
+	<h2 style="font-size:54px; font-weight: bold;text-align:center"><span class="count">100000</span></h2>
+      <p class="counterp">Bot Conversations</p>
+    </div>
+  </div>
+</div>
+</body>
+<script>$('.count').each(function () {
+    $(this).prop('Counter',0).animate({
+        Counter: $(this).text()
+    }, {
+        duration: 2000,
+        easing: 'swing',
+        step: function (now) {
+            $(this).text(Math.ceil(now));
+        }
+    });
+});
+
+</script>
+</html>
